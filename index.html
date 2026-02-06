@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PadelPro - Elite Padel Club</title>
+    <meta
+      name="description"
+      content="Premium Padel Club - Courts, Coaching, Tournaments & Community"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                400: '#a3e635', // lime-400
+                500: '#84cc16', // lime-500
+                600: '#65a30d', // lime-600
+                900: '#1a2e05', // deep lime dark
+              },
+              dark: {
+                800: '#1f1f22',
+                900: '#131315',
+                950: '#0a0a0c',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0a0a0c;
+        color: #f3f4f6;
+      }
+      .text-neon {
+        color: #a3e635;
+        text-shadow: 0 0 10px rgba(163, 230, 53, 0.3);
+      }
+      .bg-neon {
+        background-color: #a3e635;
+      }
+      .border-neon {
+        border-color: #a3e635;
+      }
+      .glass-panel {
+        background: rgba(31, 31, 34, 0.7);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .hover-lift:hover {
+        transform: translateY(-5px);
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 30px -10px rgba(163, 230, 53, 0.2);
+      }
+    </style>
+  </head>
+  <body class="antialiased overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 glass-panel border-b border-white/5">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#" class="text-2xl font-black italic tracking-tighter text-white"
+          >PADEL<span class="text-neon">PRO</span></a
+        >
+        <div class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide">
+          <a href="#about" class="hover:text-brand-400 transition-colors">CLUB</a>
+          <a href="#courts" class="hover:text-brand-400 transition-colors">COURTS</a>
+          <a href="#coaching" class="hover:text-brand-400 transition-colors">COACHING</a>
+          <a href="#events" class="hover:text-brand-400 transition-colors">EVENTS</a>
+          <a href="#location" class="hover:text-brand-400 transition-colors">VISIT</a>
+        </div>
+        <a
+          href="#booking"
+          class="hidden md:inline-block px-6 py-2 bg-brand-400 text-dark-950 font-bold rounded-full hover:bg-brand-500 transition-colors transform hover:scale-105"
+        >
+          BOOK COURT
+        </a>
+        <!-- Mobile Menu Button Placeholder -->
+        <button class="md:hidden text-white hover:text-brand-400">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <header id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+      <!-- Main Background Image -->
+      <img
+        src="https://images.unsplash.com/photo-1646649853703-7645147474ba?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Dramatic indoor padel court with players"
+        class="absolute inset-0 w-full h-full object-cover opacity-60"
+      />
+      <!-- Image: dramatic indoor padel court with players -->
+
+      <!-- Optional Secondary Overlay (Texture/Gradient) -->
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/50 to-transparent"
+      ></div>
+      <div
+        class="absolute inset-0 bg-[url('https://placehold.co/1920x1080/000000/ffffff?text=+')] opacity-5 mix-blend-overlay"
+      ></div>
+      <!-- Image: texture overlay placeholder -->
+
+      <div class="relative z-10 container mx-auto px-6 text-center">
+        <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-6 leading-tight">
+          UNLEASH YOUR <br /><span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-emerald-500"
+            >POTENTIAL</span
+          >
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto font-light">
+          The ultimate padel experience. World-class courts, elite coaching, and a vibrant
+          community.
+        </p>
+        <div class="flex flex-col md:flex-row gap-4 justify-center">
+          <a
+            href="#booking"
+            class="px-8 py-4 bg-brand-400 text-dark-950 text-lg font-bold rounded-full hover:bg-brand-500 transition-all hover:shadow-[0_0_20px_rgba(163,230,53,0.4)]"
+          >
+            BOOK A COURT
+          </a>
+          <a
+            href="#about"
+            class="px-8 py-4 bg-transparent border-2 border-white text-white text-lg font-bold rounded-full hover:bg-white hover:text-dark-950 transition-all"
+          >
+            EXPLORE CLUB
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. About the Company -->
+    <section id="about" class="py-24 bg-dark-900 relative">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="space-y-8">
+            <h2 class="text-4xl md:text-5xl font-bold uppercase tracking-wide">
+              Refining the <span class="text-brand-400">Game</span>
+            </h2>
+            <p class="text-gray-400 text-lg leading-relaxed">
+              PadelPro isn't just a venue; it's a revolution in social sports. Born from a passion
+              for the game, we've created a sanctuary for players of all levels. Our facility
+              combines state-of-the-art technology with an energetic atmosphere that keeps you
+              coming back for "just one more match."
+            </p>
+            <div class="flex gap-8 border-l-4 border-brand-400 pl-6">
+              <div>
+                <span class="block text-3xl font-black text-white">12</span>
+                <span class="text-sm text-gray-400 uppercase tracking-widest">Pro Courts</span>
+              </div>
+              <div>
+                <span class="block text-3xl font-black text-white">24/7</span>
+                <span class="text-sm text-gray-400 uppercase tracking-widest">Access</span>
+              </div>
+              <div>
+                <span class="block text-3xl font-black text-white">5k+</span>
+                <span class="text-sm text-gray-400 uppercase tracking-widest">Members</span>
+              </div>
+            </div>
+          </div>
+          <div class="relative grid grid-cols-2 gap-4">
+            <img
+              src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?q=80&w=1000&auto=format&fit=crop"
+              alt="Exterior padel venue at night"
+              class="rounded-2xl shadow-2xl object-cover h-64 w-full transform translate-y-8"
+            />
+            <!-- Image: exterior padel venue at night -->
+
+            <img
+              src="https://images.unsplash.com/photo-1646649851800-48dba35edc76?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Players socializing after a match"
+              class="rounded-2xl shadow-2xl object-cover h-64 w-full"
+            />
+            <!-- Image: players socializing after a match -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Padel Courts Information -->
+    <section id="courts" class="py-24 bg-dark-950">
+      <div class="container mx-auto px-6 text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold uppercase mb-4">
+          World Class <span class="text-brand-400">Surfaces</span>
+        </h2>
+        <p class="text-gray-400 max-w-xl mx-auto">
+          Experience the perfect bounce on our WPT-official Mondo turf.
+        </p>
+      </div>
+
+      <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Court Card 1 -->
+        <div class="group bg-dark-900 rounded-3xl overflow-hidden hover-lift border border-white/5">
+          <div class="relative h-64 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1526888935184-a82d2a4b7e67?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Indoor padel court"
+              class="w-full h-full object-cover transition transform group-hover:scale-110 duration-700"
+            />
+            <!-- Image: indoor padel court -->
+            <div
+              class="absolute top-4 right-4 bg-brand-400 text-dark-950 text-xs font-bold px-3 py-1 rounded-full"
+            >
+              INDOOR
+            </div>
+          </div>
+          <div class="p-8">
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-2xl font-bold">Panoramic Court</h3>
+              <!-- Image: court lighting and surface detail -->
+            </div>
+            <p class="text-gray-400 text-sm mb-6">
+              Full panoramic glass design for unobstructed viewing. Supercourt XN turf for optimal
+              grip and speed.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-300 mb-6">
+              <li class="flex items-center">
+                <span class="w-2 h-2 bg-brand-400 rounded-full mr-2"></span>Philips LED Lighting
+              </li>
+              <li class="flex items-center">
+                <span class="w-2 h-2 bg-brand-400 rounded-full mr-2"></span>Climate Controlled
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Court Card 2 -->
+        <div class="group bg-dark-900 rounded-3xl overflow-hidden hover-lift border border-white/5">
+          <div class="relative h-64 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1646649852033-7e0f3d679f8b?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Outdoor padel court"
+              class="w-full h-full object-cover transition transform group-hover:scale-110 duration-700"
+            />
+            <!-- Image: outdoor padel court -->
+            <div
+              class="absolute top-4 right-4 bg-white text-dark-950 text-xs font-bold px-3 py-1 rounded-full"
+            >
+              OUTDOOR
+            </div>
+          </div>
+          <div class="p-8">
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-2xl font-bold">Arena Court</h3>
+            </div>
+            <p class="text-gray-400 text-sm mb-6">
+              Stadium style seating for 200 spectators. The ultimate venue for finals and exhibition
+              matches.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-300 mb-6">
+              <li class="flex items-center">
+                <span class="w-2 h-2 bg-brand-400 rounded-full mr-2"></span>Grandstand Seating
+              </li>
+              <li class="flex items-center">
+                <span class="w-2 h-2 bg-brand-400 rounded-full mr-2"></span>Broadcast Ready
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Court Card 3 -->
+        <div class="group bg-dark-900 rounded-3xl overflow-hidden hover-lift border border-white/5">
+          <div class="relative h-64 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1657704358775-ed705c7388d2?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Singles padel court"
+              class="w-full h-full object-cover transition transform group-hover:scale-110 duration-700"
+            />
+            <!-- Image: singles padel court -->
+            <div
+              class="absolute top-4 right-4 bg-gray-700 text-white text-xs font-bold px-3 py-1 rounded-full"
+            >
+              TRAINING
+            </div>
+          </div>
+          <div class="p-8">
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-2xl font-bold">Technical Court</h3>
+              <!-- Image: camera technology detail -->
+            </div>
+            <p class="text-gray-400 text-sm mb-6">
+              Equipped with AI-powered cameras for stroke analysis and match playback reviews.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-300 mb-6">
+              <li class="flex items-center">
+                <span class="w-2 h-2 bg-brand-400 rounded-full mr-2"></span>Video Analysis
+              </li>
+              <li class="flex items-center">
+                <span class="w-2 h-2 bg-brand-400 rounded-full mr-2"></span>Ball Machine
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Coaching Clinic -->
+    <section id="coaching" class="py-24 bg-dark-900">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+          <div>
+            <h2 class="text-3xl md:text-5xl font-bold uppercase">
+              Master the <span class="text-brand-400">Technique</span>
+            </h2>
+            <p class="text-gray-400 mt-2">
+              Learn from the best. Our certified pros are here to elevate your game.
+            </p>
+          </div>
+          <a
+            href="#"
+            class="text-brand-400 underline font-bold hover:text-white transition-colors mt-4 md:mt-0"
+            >View All Coaches -></a
+          >
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Program 1 -->
+          <div
+            class="bg-dark-800 rounded-3xl p-6 flex flex-col sm:flex-row gap-6 hover:bg-dark-800/80 transition-colors border border-white/5"
+          >
+            <div class="relative w-full sm:w-1/3 shrink-0">
+              <img
+                src="http://images.unsplash.com/photo-1767158038797-d79830eb570c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Professional padel coach portrait"
+                class="w-full h-64 sm:h-full object-cover rounded-2xl"
+              />
+              <!-- Image: professional padel coach portrait -->
+            </div>
+            <div class="flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-white mb-2">Beginner Clinic</h3>
+              <p class="text-gray-400 text-sm mb-4">
+                Perfect for new players. Learn the rules, grip, basic strokes, and glass positioning
+                in a fun group setting.
+              </p>
+              <div class="h-32 w-full rounded-xl overflow-hidden mb-4 relative">
+                <img
+                  src="https://images.unsplash.com/photo-1657704358775-ed705c7388d2?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Coach training beginner players"
+                  class="absolute inset-0 w-full h-full object-cover opacity-75"
+                />
+                <!-- Image: coach training beginner players -->
+              </div>
+              <button
+                class="w-full py-3 bg-white/10 text-brand-400 font-bold rounded-xl hover:bg-brand-400 hover:text-dark-900 transition-colors"
+              >
+                Book Session
+              </button>
+            </div>
+          </div>
+
+          <!-- Program 2 -->
+          <div
+            class="bg-dark-800 rounded-3xl p-6 flex flex-col sm:flex-row gap-6 hover:bg-dark-800/80 transition-colors border border-white/5"
+          >
+            <div class="relative w-full sm:w-1/3 shrink-0">
+              <img
+                src="http://images.unsplash.com/photo-1768637757353-57c498a225b7?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Professional padel coach portrait"
+                class="w-full h-64 sm:h-full object-cover rounded-2xl"
+              />
+              <!-- Image: professional padel coach portrait -->
+            </div>
+            <div class="flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-white mb-2">Advanced Tactics</h3>
+              <p class="text-gray-400 text-sm mb-4">
+                For competitive players. Focus on Bandejas, Viboras, and advanced court positioning
+                strategies.
+              </p>
+              <div class="h-32 w-full rounded-xl overflow-hidden mb-4 relative">
+                <img
+                  src="https://images.unsplash.com/photo-1657704358775-ed705c7388d2?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Coach explaining tactics"
+                  class="absolute inset-0 w-full h-full object-cover opacity-75"
+                />
+                <!-- Image: coach training advanced players -->
+              </div>
+              <button
+                class="w-full py-3 bg-white/10 text-brand-400 font-bold rounded-xl hover:bg-brand-400 hover:text-dark-900 transition-colors"
+              >
+                Book Session
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Events & Tournaments -->
+    <section id="events" class="py-24 bg-dark-950">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl md:text-5xl font-bold uppercase mb-12 text-center">
+          Upcoming
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-green-500"
+            >Action</span
+          >
+        </h2>
+
+        <div class="flex flex-nowrap overflow-x-auto pb-8 gap-6 snap-x">
+          <!-- Event Card 1 -->
+          <div
+            class="min-w-[300px] md:min-w-[400px] bg-dark-900 rounded-3xl overflow-hidden snap-center border border-white/5"
+          >
+            <div class="h-48 relative">
+              <img
+                src="https://images.unsplash.com/photo-1657704358775-ed705c7388d2?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Padel tournament crowd"
+                class="w-full h-full object-cover"
+              />
+              <!-- Image: padel tournament crowd -->
+              <div
+                class="absolute top-4 left-4 bg-brand-600 text-white font-bold px-3 py-1 rounded text-sm"
+              >
+                AUG 12-14
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Summer Padel Open</h3>
+              <p class="text-gray-400 text-sm mb-4">
+                Open to all levels. Prize pool $5,000. Registration closes soon.
+              </p>
+              <a
+                href="#"
+                class="block text-center py-2 border border-brand-400 text-brand-400 rounded-lg hover:bg-brand-400 hover:text-dark-900 font-bold transition-all"
+                >Register Now</a
+              >
+            </div>
+          </div>
+
+          <!-- Event Card 2 -->
+          <div
+            class="min-w-[300px] md:min-w-[400px] bg-dark-900 rounded-3xl overflow-hidden snap-center border border-white/5"
+          >
+            <div class="h-48 relative">
+              <img
+                src="https://images.unsplash.com/photo-1646649852033-7e0f3d679f8b?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Match action shot"
+                class="w-full h-full object-cover"
+              />
+              <!-- Image: match action shot -->
+              <div
+                class="absolute top-4 left-4 bg-purple-600 text-white font-bold px-3 py-1 rounded text-sm"
+              >
+                EVERY FRI
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Friday Night Socials</h3>
+              <p class="text-gray-400 text-sm mb-4">
+                Mix and match format. DJ, drinks, and casual play until midnight.
+              </p>
+              <a
+                href="#"
+                class="block text-center py-2 border border-brand-400 text-brand-400 rounded-lg hover:bg-brand-400 hover:text-dark-900 font-bold transition-all"
+                >Join List</a
+              >
+            </div>
+          </div>
+
+          <!-- Event Card 3 -->
+          <div
+            class="min-w-[300px] md:min-w-[400px] bg-dark-900 rounded-3xl overflow-hidden snap-center border border-white/5"
+          >
+            <div class="h-48 relative">
+              <img
+                src="https://images.unsplash.com/photo-1526888935184-a82d2a4b7e67?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Junior players celebrating"
+                class="w-full h-full object-cover"
+              />
+              <!-- Image: junior tournament -->
+              <div
+                class="absolute top-4 left-4 bg-blue-600 text-white font-bold px-3 py-1 rounded text-sm"
+              >
+                SEP 05
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Junior Championship</h3>
+              <p class="text-gray-400 text-sm mb-4">
+                Under 16s competition. Great prizes and scouting opportunities.
+              </p>
+              <a
+                href="#"
+                class="block text-center py-2 border border-brand-400 text-brand-400 rounded-lg hover:bg-brand-400 hover:text-dark-900 font-bold transition-all"
+                >Sign Up</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Community & Membership -->
+    <section id="community" class="py-24 bg-brand-900 relative overflow-hidden">
+      <div class="absolute inset-0 bg-dark-950/90 z-0"></div>
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+          <div class="lg:w-1/2">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+              Join the <br /><span class="text-brand-400">Movement</span>
+            </h2>
+            <p class="text-gray-300 text-lg mb-8">
+              Become a member and unlock exclusive benefits. Priority booking, discounts on gear,
+              and access to members-only lounge. Padel is better together.
+            </p>
+            <ul class="space-y-4 mb-10">
+              <li class="flex items-center text-xl font-semibold">
+                <svg class="w-6 h-6 mr-4 text-brand-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                7 Days priority booking
+              </li>
+              <li class="flex items-center text-xl font-semibold">
+                <svg class="w-6 h-6 mr-4 text-brand-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                15% Off Pro Shop
+              </li>
+              <li class="flex items-center text-xl font-semibold">
+                <svg class="w-6 h-6 mr-4 text-brand-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                Sauna & Ice Batch Access
+              </li>
+            </ul>
+            <a
+              href="#"
+              class="px-8 py-4 bg-brand-400 text-dark-950 font-bold rounded-full hover:bg-white transition-colors shadow-[0_0_20px_rgba(163,230,53,0.3)]"
+              >BECOME A MEMBER</a
+            >
+          </div>
+          <div class="lg:w-1/2 relative">
+            <div class="grid grid-cols-2 gap-4">
+              <img
+                src="https://images.unsplash.com/photo-1646649851780-d9701b7c3c04?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Group padel match"
+                class="rounded-2xl shadow-xl transform translate-y-8 w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
+              <!-- Image: group padel match -->
+              <img
+                src="https://images.unsplash.com/photo-1657704358775-ed705c7388d2?q=80&w=1073&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Players laughing courtside"
+                class="rounded-2xl shadow-xl w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
+              <!-- Image: players laughing courtside -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Gallery -->
+    <section id="gallery" class="py-24 bg-dark-950">
+      <div class="container mx-auto px-6 mb-12 flex justify-between items-end">
+        <h2 class="text-4xl font-bold uppercase">Club <span class="text-brand-400">Vibes</span></h2>
+        <p class="hidden md:block text-gray-400">Follow us @PadelProClub</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-2">
+        <!-- Grid Item 1 (Large) -->
+        <div class="col-span-2 row-span-2 relative group overflow-hidden rounded-2xl">
+          <img
+            src="https://images.unsplash.com/photo-1612534847738-b3af9bc31f0c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Padel court night lighting"
+            class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+          />
+          <!-- Image: padel court night lighting -->
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+          >
+            <span class="text-brand-400 font-bold text-xl">Night Play</span>
+          </div>
+        </div>
+        <!-- Grid Item 2 -->
+        <div class="relative group overflow-hidden rounded-2xl h-64">
+          <img
+            src="https://images.unsplash.com/photo-1646649852046-b758d2d573f3?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Coaching session"
+            class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+          />
+          <!-- Image: coaching session -->
+        </div>
+        <!-- Grid Item 3 -->
+        <div class="relative group overflow-hidden rounded-2xl h-64">
+          <img
+            src="https://images.unsplash.com/photo-1715333157294-49b465a34054?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Tournament match"
+            class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+          />
+          <!-- Image: tournament match -->
+        </div>
+        <!-- Grid Item 4 -->
+        <div class="relative group overflow-hidden rounded-2xl h-64">
+          <img
+            src="https://images.unsplash.com/photo-1646649853517-e2f75cde1908?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Community gathering"
+            class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+          />
+          <!-- Image: community gathering -->
+        </div>
+        <!-- Grid Item 5 -->
+        <div class="relative group overflow-hidden rounded-2xl h-64">
+          <img
+            src="https://images.unsplash.com/photo-1613870930431-a09c7139eb33?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Pro shop gear"
+            class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+          />
+          <!-- Image: pro shop gear -->
+        </div>
+        <!-- Grid Item 6 -->
+        <div class="relative group overflow-hidden rounded-2xl h-64">
+          <img
+            src="https://images.unsplash.com/flagged/photo-1576972405668-2d020a01cbfa?q=80&w=1174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Club cafe"
+            class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+          />
+          <!-- Image: club cafe -->
+        </div>
+        <!-- Grid Item 7 -->
+        <div class="relative group overflow-hidden rounded-2xl h-64">
+          <img
+            src="https://images.unsplash.com/photo-1526889836072-dbb0f1dbce66?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Winners trophy"
+            class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+          />
+          <!-- Image: winners trophy -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Testimonials -->
+    <section id="testimonials" class="py-24 bg-dark-900 border-t border-white/5">
+      <div class="container mx-auto px-6 text-center max-w-4xl">
+        <h2 class="text-3xl font-bold mb-16">Player <span class="text-brand-400">Stories</span></h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Review 1 -->
+          <div class="bg-dark-950 p-8 rounded-3xl relative border border-white/5">
+            <div class="absolute -top-6 left-8">
+              <img
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Smiling padel player portrait"
+                class="w-12 h-12 rounded-full border-2 border-brand-400"
+              />
+              <!-- Image: smiling padel player portrait -->
+            </div>
+            <p class="text-gray-400 italic mb-6">
+              "The best facilities in the city, hands down. The panoramic courts are incredible to
+              play on, and the coaching staff actually improved my bandeja in one session."
+            </p>
+            <h4 class="font-bold text-white">Sarah Jenkins</h4>
+            <span class="text-brand-500 text-sm">Amateur Player</span>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="bg-dark-950 p-8 rounded-3xl relative border border-white/5">
+            <div class="absolute -top-6 left-8">
+              <img
+                src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Competitive player portrait"
+                class="w-12 h-12 rounded-full border-2 border-brand-400"
+              />
+              <!-- Image: competitive player portrait -->
+            </div>
+            <p class="text-gray-400 italic mb-6">
+              "I travel for tournaments often, and PadelPro stands out. The organization of their
+              weekend opens is professional grade."
+            </p>
+            <h4 class="font-bold text-white">Marc Dupois</h4>
+            <span class="text-brand-500 text-sm">Semi-Pro</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Location -->
+    <section id="location" class="h-[500px] relative bg-dark-800">
+      <div class="absolute inset-0 w-full h-full">
+        <img
+          src="https://images.unsplash.com/photo-1709587824751-dd30420f5cf3?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Map location placeholder"
+          class="w-full h-full object-cover opacity-50 grayscale"
+        />
+        <!-- Image: map location placeholder -->
+      </div>
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <!-- Location Card Overlay -->
+        <div
+          class="bg-dark-950/90 glass-panel p-10 rounded-3xl max-w-md backdrop-blur-md border border-brand-400/20 pointer-events-auto"
+        >
+          <h3 class="text-2xl font-bold mb-4 flex items-center">
+            <span class="text-brand-400 mr-2">📍</span> VISIT US
+          </h3>
+          <p class="text-gray-300 mb-4">
+            124 Sport Avenue,<br />
+            Athletic District, NY 10012
+          </p>
+          <div class="space-y-2 text-sm text-gray-400 mb-6">
+            <p><span class="text-white font-bold">Mon-Fri:</span> 6:00 AM - 11:00 PM</p>
+            <p><span class="text-white font-bold">Sat-Sun:</span> 7:00 AM - 10:00 PM</p>
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1709587824751-dd30420f5cf3?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Padel venue exterior"
+            class="w-full h-32 object-cover rounded-xl mb-4"
+          />
+          <!-- Image: padel venue exterior -->
+          <button
+            class="w-full py-3 bg-brand-400 text-dark-950 font-bold rounded-lg hover:bg-brand-500 transition-colors"
+          >
+            Get Directions
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Contact & Final CTA -->
+    <section
+      id="contact"
+      class="py-24 relative overflow-hidden flex items-center justify-center min-h-[60vh]"
+    >
+      <img
+        src="https://images.unsplash.com/photo-1601646778735-3eaaa2a8d962?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Padel court sunset mood"
+        class="absolute inset-0 w-full h-full object-cover z-0 opacity-40"
+      />
+      <!-- Image: padel court sunset mood -->
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/80 to-transparent z-10"
+      ></div>
+
+      <div class="relative z-20 container mx-auto px-6 text-center">
+        <h2 class="text-5xl md:text-7xl font-black mb-8">
+          READY TO <span class="text-brand-400">PLAY?</span>
+        </h2>
+        <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+          Book your court today and experience the fastest growing sport in the world.
+        </p>
+        <form class="max-w-md mx-auto space-y-4 mb-8">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="w-full px-6 py-4 rounded-full bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-brand-400 text-center backdrop-blur-sm"
+          />
+          <button
+            type="submit"
+            class="w-full px-6 py-4 rounded-full bg-brand-400 text-dark-950 font-bold text-lg hover:bg-brand-500 transition-colors shadow-lg hover:shadow-brand-400/50"
+          >
+            LETS GO
+          </button>
+        </form>
+        <p class="text-gray-500 text-sm">Join 5,000+ other members today.</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-950 py-12 border-t border-white/5">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0">
+            <a href="#" class="text-2xl font-black italic tracking-tighter text-white"
+              >PADEL<span class="text-neon">PRO</span></a
+            >
+            <p class="text-gray-500 text-xs mt-2">© 2024 PadelPro Club. All rights reserved.</p>
+          </div>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-400 hover:text-brand-400 transition-colors">Instagram</a>
+            <a href="#" class="text-gray-400 hover:text-brand-400 transition-colors">Twitter</a>
+            <a href="#" class="text-gray-400 hover:text-brand-400 transition-colors">Facebook</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
